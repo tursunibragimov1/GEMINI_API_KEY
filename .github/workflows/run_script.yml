@@ -1,16 +1,11 @@
 name: Avtomatik Ishga Tushirish
 
 on:
-  schedule:
-    # Har kuni UTC bo'yicha soat 06:00 da avtomatik ishga tushadi
-    - cron: '0 6 * * *'
-  # Qo'lda xohlagan payt ishga tushirish tugmasi
   workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
-
     steps:
       - name: Repozitoriy kodini olish
         uses: actions/checkout@v4
